@@ -2,13 +2,14 @@
 const mongoose = require('mongoose');
 const invoiceSchema = new mongoose.Schema({
     invoiceNumber: {
-        type: String,
+        type: Number,
         required: true,
-        unique: true
+        
+        
     },
     invoicedate: {
         type: Date,
-        required: true      
+        required: true  
     },
     invoiceammount: {
         type: Number,
@@ -16,8 +17,8 @@ const invoiceSchema = new mongoose.Schema({
     },
     finicialyear: {
         type: String,
-        required: true,
-         unique: true
+        required: true
+        
     }
 }
 );
