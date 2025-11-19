@@ -7,14 +7,14 @@ const mongoose= require('mongoose');
 const app = express()
 const port = 3000
 const router  = require('./routes/invoice.routes.js');
-
+const userrouter = require("./routes/user.route.js")
 app.use(express.json());
 
+app.use("/api/users",userrouter);
+
+
+
 app.use(router);
-
-
-
-
 
 
 coonectiondb1();

@@ -23,7 +23,8 @@ exports.createinvoice =  async (req,res)=>{
 //     };
 
 
-        await invoicemodel.collection.insertOne(invoicedata);
+        // await invoicemodel.collection.insertOne(invoicedata);
+        await invoicemodel.create(invoicedata);
         res.json({message:" invoice add to database successfully"});
     }catch(err){
         res.json({message:err.message});
